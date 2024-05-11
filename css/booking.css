@@ -1,0 +1,220 @@
+@font-face{
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    display: swap;
+}
+@font-face{
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+body{
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header_wrapper{
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+.menu{
+    width: 100%;
+    max-width: 728px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    max-width: 345px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+	cursor: pointer;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+nav a:after{
+    position: absolute;
+    content: '';
+    height: 2.5px;
+    bottom: -27px;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    background: black;
+    transition:.45s;
+}
+nav a:hover:after{
+    opacity: 1;
+}
+main{
+    background: url(../image/book-back.jpg) center/cover no-repeat;
+    flex-grow: 1;
+}
+.wrapper_main{
+    background-color: #fff;
+    border-radius: 54px;
+    width: 70%;
+    height: 50%;
+    margin: 30px auto;
+}
+form{
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+.group{
+  margin: 20px 0;
+}
+.inlined{
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+label{
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1em;
+}
+input, select{
+  border-radius: 10px;
+  border: 1px solid #000;
+  font-size: 1em;
+  width: 100%;
+  padding: 10px;
+}
+hr{
+  border: 1px solid #e0e0e0;
+}
+button{
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #000;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+button:active{
+  background: #e0e0e0;
+}
+footer{
+    flex-shrink: 0;
+}
+.footer{
+    background:#3E3E3E;
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    width: 100%;
+}
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.3% 0%;
+color:white;
+font-size:0.8em;
+}
+.footer .row a{
+text-decoration:none;
+color:white;
+transition:0.5s;
+}
+.footer .row a:hover{
+color:gray;
+}
+.footer .row ul{
+width:100%;
+}
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+@media (max-width: 1440px) {
+  .container{
+      max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container{
+      max-width: 768px;
+  }
+  .menu{
+      max-width: 425px;
+  }
+  form{
+    padding: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .container{
+      max-width: 625px;
+  }
+  .menu{
+      max-width: 375px;
+  }
+  form{
+    padding: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .header_wrapper{
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+  }
+  .container{
+      max-width: 375px;
+  }
+  .menu{
+      max-width: 320px;
+  }
+  nav{
+      max-width: 320px;
+      justify-content: space-around;
+  }
+  .inlined{
+    width: 100%;
+    display: block;
+    float: none;
+  }
+  form{
+    padding: 15px;
+  }
+}

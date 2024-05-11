@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+body{
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header_wrapper{
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end
+}
+.menu{
+    width: 100%;
+    max-width: 728px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    max-width: 345px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+	cursor: pointer;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+nav a:after {
+    position: absolute;
+    content: '';
+    height: 2.5px;
+    bottom: -27px;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    background: black;
+    transition:.45s;
+}
+nav a:hover:after {
+    opacity: 1;
+}
+.banner{
+    margin-top: 30px;
+    height: 550px;
+    background: url(../image/banner.jpg) no-repeat center/cover;
+}
+main{
+    flex-grow: 1;
+}
+.main_wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 53px 0 76px;
+}
+.main_wrapper .cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    height: 180px;
+    border-radius: 10px;
+    background: linear-gradient(169deg, #93e5ff 0%, #f5fdff 90.88%, #fff 100%);
+    padding: 25px;
+}
+.main_wrapper .cell img{
+    width: 100%;
+    max-width: 72px;
+}
+.main_wrapper .cell h2{
+    font-size: 22px;
+    font-weight: 500;
+}
+.main_wrapper .cell button{
+    background-color:#fff;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.main_wrapper .cell button:active{
+    background-color: #e0e0e0;
+}
+
+footer{
+    flex-shrink: 0;
+}
+.footer{
+    background:#3E3E3E;
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    width: 100%;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.3% 0%;
+color:white;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:white;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:gray;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+@media (max-width: 1440px) {
+    .container{
+        max-width: 1024px;
+    }
+    .main_wrapper{
+        gap: 15px;
+    }
+    .banner{
+        height: 450px;
+    }
+}
+@media (max-width: 1024px) {
+    .container{
+        max-width: 768px;
+    }
+    .menu{
+        max-width: 425px;
+    }
+    .banner{
+        height: 350px;
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        max-width: 625px;
+    }
+    .menu{
+        max-width: 375px;
+    }
+    .main_wrapper{
+        justify-content: center;
+    }
+    .banner{
+        height: 250px;
+    }
+}
+@media (max-width: 425px) {
+    .header_wrapper{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .container{
+        max-width: 375px;
+    }
+    .menu{
+        max-width: 320px;
+    }
+    nav{
+        max-width: 320px;
+        justify-content: space-around;
+    }
+    .banner{
+        height: 150px;
+    }
+}
